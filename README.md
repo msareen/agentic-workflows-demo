@@ -3,19 +3,23 @@
 
 This project demonstrates building and running AI agents using LangGraph, LangChain, and FastAPI. Each Python file is an independent demo and can be run directly as a script—Jupyter notebooks are provided for convenience but are completely optional.
 
-## Project Structure
 
-- `main.py` — Standalone demo script.
+## Project Structure & Example Descriptions
+
+- `main.py` — Standalone demo script (custom entry point).
 - `pyproject.toml` — Project dependencies and configuration.
-- `simple/` — Contains independent demo files:
-  - `agent_with_state.ipynb` — (Optional) Jupyter notebook for stateful agent demos.
-  - `agent_with_condition.ipynb` — (Optional) Notebook for conditional agent flows.
-  - `agent.ipynb` — (Optional) Basic agent notebook.
-  - `load_env.py` — Loads environment variables for API keys.
-  - `load_llm.py` — Shared package file for loading and configuring the language model.
-  - `utils.py` — Shared package file for utility functions (e.g., graph visualization, tracing).
-  - `5_agent.py`, `fast_api.py`, etc. — Each is a standalone demo and can be run directly with Python.
-- `server/` — Contains API server code (e.g., `api.py`).
+- `py-src/` — Contains independent demo files:
+  - `agent_with_state.ipynb` — (Optional) Jupyter notebook showing how to build an agent with persistent state and memory.
+  - `agent_with_condition.ipynb` — (Optional) Notebook demonstrating conditional logic in agent workflows (e.g., branching based on LLM output).
+  - `agent.ipynb` — (Optional) Basic agent notebook for simple LLM invocation and response.
+  - `load_env.py` — Loads environment variables for API keys (used by other demos).
+  - `load_llm.py` — Shared package file for loading and configuring the language model (imported by all agent demos).
+  - `utils.py` — Shared package file for utility functions, including graph visualization and tracing.
+  - `5_agent.py` — Example of an agent using LangGraph with tool integration; demonstrates function-calling and graph-based agent logic.
+  - `6_agent_stream.py` — Example of streaming agent responses interactively in the terminal, showing how to process LLM output as events.
+  - `fast_api.py` — FastAPI app with example endpoints for serving agent responses via HTTP API.
+- `server/` — Contains API server code:
+  - `api.py` — FastAPI server with endpoints for customer queries and basic responses.
 
 ## Step-by-Step LLM Demos
 
