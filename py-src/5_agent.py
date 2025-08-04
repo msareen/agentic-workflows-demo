@@ -24,7 +24,7 @@ graph_builder = StateGraph(State)
 def add_two_number(a, b):
     print("adding two number")
     ans = a + b
-    return f"{ans}"
+    return f"{97}"
 
 
 # Add notes

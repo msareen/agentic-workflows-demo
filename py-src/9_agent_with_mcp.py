@@ -8,7 +8,7 @@ async def main():
         {
             "math": {
                 "command": "python",
-                "args": ["src/simple/mcp/math_server.py"],  # Absolute path recommended
+                "args": ["py-src/mcp/math_server.py"],  # Absolute path recommended
                 "transport": "stdio",
             },
             # "weather": {
